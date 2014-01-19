@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html >
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript" src="custom.js"></script>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<audio id="music" source src="05 Let It Go.mp3"  type="audio/mpeg">
+	Your browser does not support the audio element.
+</audio>
+	</head>
+	
+	<body>
+		<div id="container">
+    		<!-- header -->
+	        <div id="logo"><a href="#">Welcome to Flukebox</a></div>
+				<div id="menu">
+					<a href="#">Home</a>
+					<a class="show-popup" href="#"> Learn More</a> 
+            		
+            		<div class="overlay-bg">
+            			<div class="overlay-content">
+		            		<p> 
+								As the master of your party you get to pick the
+								song to play!  Begin my choosing the .mp3 file
+								you want to play.  (It can only be .mp3 or .m4a
+								format.  The title cannot have apostrophes or 
+								quotation marks!) Then when the users you want
+								have connect you click on the ready button and
+								you can have all the users begin playing the
+								music.  Whoooo party!!!!
+							</p>
+							<button class="close-btn">Close</button>
+						</div>
+					</div>
+				</div>
+        	<!--end header -->     
+        	<!-- main -->
+        	<div id="main">
+        
+          		<div id="text">
+            		<h1>We are ready to rock!</h1>
+            
+			            <p><strong>Party Time!</strong> Everything is ready to go. It is all up to you now.  Make this party awesome.</p>
+           		</div>
+           		
+<script>
+var audio=document.getElementById("music");
+var Tstart = 1390124130;
+function playmusic()
+{
+	music.play();
+}
+function pausemusic()
+{
+	music.pause();
+}
+function loadit() {
+	playmusic();
+	pausemusic();
+	while(Math.round(new Date().getTime()) <=Tstart*1000);
+	playmusic();
+	}
+</script>
+<div id="text">
+	<button onclick="loadit()" type="button">Initialize</button>
+	<button onclick="playmusic()" type="button">Play</button>
+	<button onclick="pausemusic()" type="button">Pause</button>
+</div>
+           		
+           		
+			</div>
+    		<!-- end main -->
+		    <!-- footer -->
+		    <div id="footer">
+        	    <div id="menu_footer"><a href="#">home</a> | <a class="show-popup" href="#"> about</a> 
+            		
+            		<div class="overlay-bg">
+            			<div class="overlay-content">
+		            		<p> 
+								As the master of your party you get to pick the
+								song to play!  Begin my choosing the .mp3 file
+								you want to play.  (It can only be .mp3 or .m4a
+								format.) Then when the users you want have 
+								connect you click on the ready button and you 
+								can have all the users begin playing the music.
+								Whoooo party!!!!
+							</p>
+							<button class="close-btn">Close</button>
+						</div>
+					</div>
+            		<div id="left_footer">&copy; Copyright 2014 <b>Flukebox</b></div>
+	            <div id="right_footer">
+
+
+   				</div>
+			</div>
+    		<!-- end footer -->
+		</div>
+	</body>
+</html>
